@@ -1,0 +1,7 @@
+# cria um projeto codeigniter
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    composer/composer:latest \
+    composer create-project codeigniter4/appstarter in_ventory
