@@ -1,3 +1,7 @@
+#
+# https://docs.docker.com/guides/php/
+# 
+
 FROM php:8.5.2-fpm-alpine3.22
 
 LABEL maintainer="<github.com/felipesantos2>"
