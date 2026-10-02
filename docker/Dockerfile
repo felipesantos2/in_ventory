@@ -2,11 +2,17 @@
 # https://docs.docker.com/guides/php/
 # 
 
-FROM php:8.5.2-fpm-alpine3.22
+FROM php:8.5.11-fpm-alpine3.24
 
 LABEL maintainer="<github.com/felipesantos2>"
 
-RUN apk update && apk add --no--cache \
+WORKDIR /app
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+RUN apk update && apk add wget \
+    openssl-dev \
+    autoconf \
     libpng-dev \
     libjpeg-turbo-dev \
     freetype-dev \
@@ -19,16 +25,9 @@ RUN apk update && apk add --no--cache \
     git \
     bash \
     curl \
-    --virtual .build-deps gcc g++ make
+    postgresql-dev \
+    --virtual .build-deps gcc g++ make \
+    build-base
 
-RUN docker-php-ext-install gd pdo pdo_mysql
-
-RUN apk add --no-cache postgresql-dev && docker-php-ext-install pdo_pgsql
-
-RUN curl -sS https://getcomposer.org/installer | php --  --install-dir=/usr/local/bin --filename=composer
-
-RUN chmod -R 777 .
-
-# EXPOSE 8080
-
-# CMD [ "php", "spark", "serve" ]
+# https://codeigniter.com/user_guide/intro/requirements.html
+RUN docker-php-ext-install intl gd pdo_mysql pdo_pgsql

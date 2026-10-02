@@ -12,3 +12,6 @@ docker run --rm \
     -w /var/www/html \
     composer/composer:latest \
     composer install --ignore-platform-req=ext-intl
+
+    omposer install --ignore-platform-req=ext-intl
+    RUN composer install --no-interaction --optimize-autoloader --no-dev || true
