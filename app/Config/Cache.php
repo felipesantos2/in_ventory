@@ -195,4 +195,7 @@ class Cache extends BaseConfig
      * @var list<int>
      */
     public array $cacheStatusCodes = [];
+
+
+    public bool $autoRoutesImproved = true;
 }
