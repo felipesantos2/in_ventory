@@ -4,7 +4,10 @@ namespace App\Helpers;
 
 use Latte\Engine;
 
-class Latte
+/**
+ * @link https://latte.nette.org/en
+ */
+class LatteEngine
 {
     public static function render(string $template, array $params = []): string
     {

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Helpers\Latte;
+use App\Helpers\LatteEngine;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -48,6 +48,6 @@ abstract class BaseController extends Controller
     {
         $template = APPPATH . 'Views/' . $view . '.latte';
 
-        return Latte::render($template);
+        return LatteEngine::render($template);
     }
 }
