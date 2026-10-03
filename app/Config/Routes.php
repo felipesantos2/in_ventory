@@ -1,7 +1,11 @@
 <?php
 
 use CodeIgniter\Router\RouteCollection;
+use CodeIgniter\Security\CheckPhpIni;
 
-/** @var RouteCollection $routes */
-$routes->get('/', 'Home::index');
-$routes->get('/users', 'UserController::index');
+require __DIR__ . '/../routes/web.php';
+require __DIR__ . '/../routes/api.php';
+require __DIR__ . '/../routes/debug.php';
+
+
+

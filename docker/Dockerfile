@@ -29,5 +29,7 @@ RUN apk update && apk add wget \
     --virtual .build-deps gcc g++ make \
     build-base
 
+RUN apk add --no-cache nodejs npm
+
 # https://codeigniter.com/user_guide/intro/requirements.html
 RUN docker-php-ext-install intl gd pdo_mysql pdo_pgsql
