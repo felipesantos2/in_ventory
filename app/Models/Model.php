@@ -8,5 +8,4 @@ use CodeIgniter\Model as CIModel;
 
 class Model extends CIModel
 {
-    
 }

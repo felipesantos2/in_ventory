@@ -2,7 +2,6 @@
 
 namespace App\Packages\Inventary;
 
-class Model
+class UserModel
 {
-
 }

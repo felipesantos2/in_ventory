@@ -8,7 +8,7 @@ use CodeIgniter\CodeIgniter;
 use CodeIgniter\HTTP\ResponseInterface;
 
 /**
- * @link https://codeigniter.com/user_guide/guides/api/first-endpoint.html
+ * @see https://codeigniter.com/user_guide/guides/api/first-endpoint.html
  */
 class Ping extends BaseController
 {
@@ -17,21 +17,18 @@ class Ping extends BaseController
     // getIndex como nome obrigatório
     public function getIndex(): ResponseInterface
     {
-        return $this->respond([ 
-           
-            [ 
-                'status' => 'OK',
-                'date' => date('c'), 
-                'version' => CodeIgniter::CI_VERSION, 
+        return $this->respond([
+            [
+                'status'  => 'OK',
+                'date'    => date('c'),
+                'version' => CodeIgniter::CI_VERSION,
             ],
 
-            [ 
-                'status' => 'OK',
-                'date' => date('c'), 
-                'version' => CodeIgniter::CI_VERSION, 
-            ]
-               
-        ],200);
+            [
+                'status'  => 'OK',
+                'date'    => date('c'),
+                'version' => CodeIgniter::CI_VERSION,
+            ],
+        ], 200);
     }
-
 }

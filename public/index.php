@@ -9,7 +9,6 @@ use Config\Paths;
  *---------------------------------------------------------------
  */
 
-
 date_default_timezone_set('America/Sao_Paulo');
 
 $minPhpVersion = '8.2'; // If you update this, don't forget to update `spark`.
