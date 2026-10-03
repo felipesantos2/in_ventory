@@ -13,5 +13,7 @@ docker run --rm \
     composer/composer:latest \
     composer install --ignore-platform-req=ext-intl
 
-    omposer install --ignore-platform-req=ext-intl
-    RUN composer install --no-interaction --optimize-autoloader --no-dev || true
+    composer install --ignore-platform-req=ext-intl
+    composer install --no-interaction --optimize-autoloader --no-dev || true
+
+    composer require --dev codeigniter/coding-standard
