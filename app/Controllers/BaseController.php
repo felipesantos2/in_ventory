@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Helpers\Latte;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -41,5 +42,12 @@ abstract class BaseController extends Controller
 
         // Preload any models, libraries, etc, here.
         // $this->session = service('session');
+    }
+
+    public function renderLatte(string $view, array $params = []): string
+    {
+        $template = APPPATH . 'Views/' . $view . '.latte';
+
+        return Latte::render($template);
     }
 }
