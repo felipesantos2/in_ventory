@@ -25,3 +25,6 @@ MySQL/Adminer:
     -   User: root
 
     -   Password: root
+
+
+`docker exec -it php-8.5 bash`
