@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/resize@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/anchor@3.x.x/dist/cdn.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+    <title>Bem-vindo!</title>
+    <style>
+        @layer components {
+            .sidebar-menu-item {
+                /* background-color: #181a1b; */
+                color: #d9d9d9;
+                margin: 0.2rem 0.2rem;
+
+                font-family: "Raleway", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: normal;
+                font-style: normal;
+                /* font-family: "Cantarell", sans-serif;
+                font-weight: 400;
+                font-style: normal; */
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#181a1b]">
+
+    <div class="w-80">
+        <img class="px-6 py-4 bg-orange-700 w-full"
+            src="https://www.codeigniter.com/user_guide/_static/ci-logo-text.svg" alt="" srcset="">
+
+        <div class="flex flex-col p-6 text-sm bg-[#1c1e1f]  h-screen">
+
+            <a  
+                class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)"
+
+                x-data="{ open: false }"
+                @click="open = !open"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+
+                <span>Home</span>
+                
+                <p x-show="open">
+                    Lorem, ipsum.
+                </p>
+
+
+            </a>
+
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Dados Abertos</span>
+            </a>
+
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Municípios</span>
+            </a>
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+            <a class="mx-3 px-2 py-1 inline-flex items-center gap-1.5 sidebar-menu-item" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-2.5 stroke-white" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Contabilidade</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

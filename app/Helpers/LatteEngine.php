@@ -5,7 +5,7 @@ namespace App\Helpers;
 use Latte\Engine;
 
 /**
- * @link https://latte.nette.org/en
+ * @see https://latte.nette.org/en
  */
 class LatteEngine
 {

@@ -6,6 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        return $this->renderLatte('index');
+        // dd(APPPATH, ROOTPATH, SYSTEMPATH, FCPATH);
+        return $this->renderLatte('welcome');
     }
 }

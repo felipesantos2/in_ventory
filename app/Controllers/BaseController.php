@@ -48,6 +48,6 @@ abstract class BaseController extends Controller
     {
         $template = APPPATH . 'Views/' . $view . '.latte';
 
-        return LatteEngine::render($template);
+        return LatteEngine::render($template, $params);
     }
 }

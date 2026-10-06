@@ -1,9 +1,9 @@
 <?php
 
+use App\Controllers\Home;
+use App\Controllers\UserController;
 use CodeIgniter\Router\RouteCollection;
 
-// silence is golden
-
 /** @var RouteCollection $routes */
-$routes->get('/', 'Home::index');
-$routes->get('/users', 'UserController::index');
+$routes->get('/', [Home::class, 'index']);
+$routes->get('/users', [UserController::class, 'index']);

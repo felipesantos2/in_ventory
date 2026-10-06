@@ -1,5 +1,7 @@
 <?php
 
-require __DIR__ . '/../routes/web.php';
-require __DIR__ . '/../routes/api.php';
-require __DIR__ . '/../routes/debug.php';
+/** Web and Api custom routes */
+
+require APPPATH . '/routes/web.php';
+require APPPATH . '/routes/api.php';
+require APPPATH . '/routes/debug.php';

@@ -17,3 +17,8 @@ docker run --rm \
     composer install --no-interaction --optimize-autoloader --no-dev || true
 
     composer require --dev codeigniter/coding-standard
+
+vendor/bin/php-cs-fixer fix --verbose
+
+php spark make:model User
+php spark make:migration create_users_table
